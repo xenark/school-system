@@ -16,14 +16,14 @@ const Personal = () => {
     const { myinfo } = useCountries();
 
     const mycountry = myinfo.map(vals => vals.name)
-    const citizen = myinfo.map(vals => vals.demonyms.eng.m)
+    const citizen = myinfo.map(vals => vals.name)
 
     const [fixed, setFixed] = useState('z-10');
   
     const label = (info: string, par?: string) => {
         return <div className='w-fit'>
-            <Label id={'1'} label={info} required />
-            <Input id={'1'} type={par} />
+            <Label id={'1'} label={info} required errors={undefined} />
+            <Input id={'1'} type={par} errors={undefined} />
         </div>
     }
 

@@ -4,7 +4,7 @@ export const countryProps = countries.map((val) => ({
     value: val.cca2,
     flag: val.flag,
     name: val.name.common,
-    demonyms: val.demonyms,
+    demonyms: val.demonym,
 
 }))
 
