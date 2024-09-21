@@ -1,23 +1,14 @@
-'use client'
-import { useRouter } from "next/navigation";
 import Avatar from "@/app/ui/avatar";
 import { modules } from "@/app/lib/localdatabase";
-import { IconType } from "react-icons";
 import Button from "@/app/ui/button";
 import Steps from "./steps/steps";
 import { useCallback, useState } from "react";
-import { FcCamera, FcCameraAddon, FcCompactCamera, FcRotateCamera } from "react-icons/fc";
-import { AiFillCamera, AiOutlineCamera, AiOutlineLoading, AiOutlineLoading3Quarters } from "react-icons/ai";
+import { AiFillCamera, AiOutlineLoading3Quarters } from "react-icons/ai";
 
-interface Authprops {
-    actionLabel: string,
-    onSubmit: () => void;
-    body?: React.ReactElement;
-}
 
 const Start = ({}) => {
 
-    const router = useRouter();
+    // const router = useRouter();
     let [currentStage, setCurrentStage] = useState(0);
     let [disabled, setDisabled] = useState(false);
 
@@ -57,7 +48,7 @@ const Start = ({}) => {
             p-7
             flex flex-col">
                 <div
-                    onClick={() => router.push('/')} className="relative flex flex-col cursor-default justify-start items-center my-6">
+                    onClick={() => (null)} className="relative flex flex-col cursor-default justify-start items-center my-6">
                     <Avatar
                         className="border-2 border-black rounded-full shadow-md 
                hover:animate-spin" width={120}
