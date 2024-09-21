@@ -3,7 +3,7 @@ import Image from "next/image";
 import { HTMLAttributes } from "react";
 
 interface AvatarProps extends HTMLAttributes<HTMLImageElement> {
-    src: string | null | undefined,
+    src?: string | null | undefined,
     width: number,
     height: number,
 }

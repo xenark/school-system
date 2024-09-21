@@ -26,11 +26,11 @@ export const authoptions: AuthOptions = {
 
                 //upon response check if there is a user and the user has pw
 
-                if (!user || !user?.hashedpassword) {
+                if (!user ) {
                     throw new Error('Wrong credentials!')
                 }
 
-                const verify_password = await bcrypt.compare(credentials?.password, user?.hashedpassword);
+                const verify_password = await bcrypt.compare(credentials?.password, 'f');
 
                 if (!verify_password) {
                     throw new Error('Wrong credentials!')

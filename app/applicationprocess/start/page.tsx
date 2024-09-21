@@ -15,15 +15,13 @@ interface Authprops {
     body?: React.ReactElement;
 }
 
-const Start: React.FC<Authprops> = ({
-    actionLabel,
-    onSubmit,
-    body,
-}) => {
+const Start = ({}) => {
 
     const router = useRouter();
     let [currentStage, setCurrentStage] = useState(0);
     let [disabled, setDisabled] = useState(false);
+
+    const nothing = ()=> {}
 
     const next = useCallback(() => {
         currentStage < modules.length - 1 ? setCurrentStage(currentStage + 1) : setDisabled(true);
@@ -35,7 +33,7 @@ const Start: React.FC<Authprops> = ({
     }
     const prev = useCallback(() => {
         if (currentStage !== 0) action();
-    }, [currentStage])
+    }, [currentStage, action])
 
 
     const bgstyle = {
@@ -73,7 +71,7 @@ const Start: React.FC<Authprops> = ({
                 <div>
                     {modules.map((mode, i) => {
                         return <div className="flex min-w-fit  rounded-md my-1
-                        items-center gap-2 ">
+                        items-center gap-2 " key={i}>
                             <div className="py-[5px] flex items-center">
                                 <span className=" bg-white rounded w-max p-1 mr-2 text-pink-500">
                                     <mode.icon size={24} />
@@ -115,7 +113,7 @@ const Start: React.FC<Authprops> = ({
                     {currentStage === 0 ? null : <Button className="bg-green-500 text-white" label={'Previous'} onClick={prev} />
                     }
                     <Button disabled={disabled} className="bg-green-500 text-white" label={'Save and Continue'} onClick={next} />
-                    <Button className="bg-red-500 text-white" label={'Save and Exit'} onClick={null} />
+                    <Button className="bg-red-500 text-white" label={'Save and Exit'} onClick={nothing} />
                 </div>
             </div>
 

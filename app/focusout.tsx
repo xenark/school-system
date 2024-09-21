@@ -16,7 +16,7 @@ const FocusOut = <T extends HTMLElement = HTMLElement>(
         return () => {
             document.removeEventListener('click', handleClick);
         }
-    }, [])
+    }, [handleClick])
 };
 
 export default FocusOut;
