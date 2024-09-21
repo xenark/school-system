@@ -21,7 +21,8 @@
     "react-icons": "^5.1.0",
     "react-toastify": "^10.0.5",
     "swiper": "^11.1.1",
-    "world_countries_lists": "^2.9.0"
+    "world_countries_lists": "^2.9.0",
+    "world-countries": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
