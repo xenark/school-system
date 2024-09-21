@@ -17,7 +17,7 @@ const Personal = () => {
     const { myinfo } = useCountries();
 
     const mycountry = myinfo.map(vals => vals.name)
-    const citizen = myinfo.map(vals => vals.name)
+    const citizen = myinfo.map(vals => vals.demonyms)
 
     const [fixed, setFixed] = useState('z-10');
   
