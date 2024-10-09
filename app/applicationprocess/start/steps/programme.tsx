@@ -1,11 +1,5 @@
-import Input from '@/app/input';
-import Label from '@/app/labels';
-import { personalInfo } from '@/app/lib/localdatabase';
+'use client'
 import React from 'react';
-import Dropbox from '@/app/dropdown';
-import { useCountries } from '@/app/hooks/usecountries';
-
-
 
 const Programme = () => {
   

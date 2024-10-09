@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Personal from './personalinfo';
 import Final from './final';

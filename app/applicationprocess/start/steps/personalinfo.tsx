@@ -1,3 +1,4 @@
+'use client'
 import Input from '@/app/input';
 import Label from '@/app/labels';
 import { personalInfo } from '@/app/lib/localdatabase';
