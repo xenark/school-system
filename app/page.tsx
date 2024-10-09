@@ -2,7 +2,7 @@
 
 import useBackgroundImage from "./hooks/useBackgroundImage";
 
-import Start from "./applicationprocess/start/page";
+import Start from "./applicationprocess/start/start";
 
 export default function Home() {
 
