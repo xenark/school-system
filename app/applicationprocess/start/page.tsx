@@ -1,3 +1,5 @@
+'use client'
+import React from 'react';
 import Avatar from "@/app/ui/avatar";
 import { modules } from "@/app/lib/localdatabase";
 import Button from "@/app/ui/button";
